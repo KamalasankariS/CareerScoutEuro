@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerScoutEuro - Y2K Pastel Edition</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✿</text></svg>">
+</head>
+<body>
+
+  <!-- Marquee Banner -->
+  <div class="marquee-banner">
+    ★ CareerScoutEuro ★ European AI/ML/SWE Job Scraper ★ Y2K Pastel Edition ★ For Indian Students in the US ★
+  </div>
+
+  <!-- Main Mac Window -->
+  <div class="mac-window">
+
+    <!-- Title Bar -->
+    <div class="mac-titlebar">
+      <div class="traffic-lights">
+        <div class="traffic-light close"></div>
+        <div class="traffic-light minimize"></div>
+        <div class="traffic-light maximize"></div>
+      </div>
+      <div class="title">CareerScoutEuro.app - European Job Strategy Dashboard</div>
+    </div>
+
+    <!-- Finder Navigation -->
+    <nav class="finder-nav">
+      <button class="active" onclick="switchTab('currency')">Currency</button>
+      <button onclick="switchTab('jobs')">Job Boards</button>
+      <button onclick="switchTab('github')">GitHub</button>
+      <button onclick="switchTab('universities')">Universities</button>
+      <button onclick="switchTab('community')">Community</button>
+      <button onclick="switchTab('tips')">Tips & Strategy</button>
+    </nav>
+
+    <!-- Window Body -->
+    <div class="mac-body">
+
+      <!-- Hero Section -->
+      <div class="hero">
+        <h1>CareerScoutEuro</h1>
+        <p class="subtitle">
+          Your Y2K-aesthetic guide to finding AI/ML, SWE, and PhD opportunities across Europe.
+          Built for Indian students studying in the US, hunting for June 2026 start dates.
+        </p>
+        <div>
+          <button class="btn-scrape" id="scrape-btn" onclick="scrapeEverything()">
+            Scrape Everything
+          </button>
+        </div>
+        <div id="scrape-status" style="font-family: var(--font-mono); font-size: 14px; margin-top: 8px; color: var(--text-secondary);"></div>
+        <div class="visitor-counter">Visitors: <span id="visitor-count">000001</span></div>
+      </div>
+
+      <div class="y2k-divider">- - - ✿ ✿ ✿ - - -</div>
+
+      <!-- ==================== CURRENCY TAB ==================== -->
+      <div id="tab-currency" class="tab-panel active">
+        <div class="section-header">European Countries & Currency Comparison</div>
+        <div class="guestbook-note">
+          Comparing: How much is 1 USD worth in INR vs. how much is 1 unit of each European currency worth in INR?
+          If the European currency buys MORE INR than USD does, that currency is stronger than the dollar.
+        </div>
+        <div id="currency-data">
+          <div class="y2k-loader"><div class="spinner"></div><br>Loading currency data...</div>
+        </div>
+      </div>
+
+      <!-- ==================== JOBS TAB ==================== -->
+      <div id="tab-jobs" class="tab-panel">
+        <div class="section-header">Job Boards & Platforms</div>
+        <div class="guestbook-note">
+          Curated list of job boards, PhD portals, and visa resources for European opportunities.
+          Use the filters to find English-friendly, visa-sponsoring, no-recommendation positions!
+        </div>
+        <div id="jobs-data">
+          <div class="y2k-loader">Click the tab to load job platforms...</div>
+        </div>
+      </div>
+
+      <!-- ==================== GITHUB TAB ==================== -->
+      <div id="tab-github" class="tab-panel">
+        <div class="section-header">GitHub Repos & Resources</div>
+        <div class="guestbook-note">
+          Curated + searched GitHub repositories with European AI/ML/SWE job listings,
+          research opportunities, and career resources.
+        </div>
+        <div id="github-data">
+          <div class="y2k-loader">Click the tab to search GitHub...</div>
+        </div>
+      </div>
+
+      <!-- ==================== UNIVERSITIES TAB ==================== -->
+      <div id="tab-universities" class="tab-panel">
+        <div class="section-header">Elite European Universities & Professor Outreach</div>
+        <div class="guestbook-note">
+          Top CS/AI universities in Europe with direct links to their departments.
+          Plus: email templates and strategies for reaching out to professors, TAs, and RAs!
+        </div>
+        <div id="universities-data">
+          <div class="y2k-loader">Click the tab to load university data...</div>
+        </div>
+      </div>
+
+      <!-- ==================== COMMUNITY TAB ==================== -->
+      <div id="tab-community" class="tab-panel">
+        <div class="section-header">Reddit, HackerNews & Community</div>
+        <div class="guestbook-note">
+          Live search results from Reddit and HackerNews about European AI/ML/SWE jobs,
+          PhD experiences, visa guides, and more from the community.
+        </div>
+        <div id="community-data">
+          <div class="y2k-loader">Click the tab to search communities...</div>
+        </div>
+      </div>
+
+      <!-- ==================== TIPS TAB ==================== -->
+      <div id="tab-tips" class="tab-panel">
+        <div class="section-header">Strategy & Tips</div>
+        <div class="guestbook-note">
+          Everything you need to know as an Indian student looking for European opportunities.
+          Language tips, visa strategies, and pro moves.
+        </div>
+        <div id="tips-data">
+          <div class="y2k-loader">Click the tab to load tips...</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span>CareerScoutEuro v1.0 | Y2K Pastel Edition</span>
+      <span id="status-text">Ready</span>
+    </div>
+
+  </div>
+
+  <!-- Under Construction Banner (Y2K classic!) -->
+  <div class="under-construction" style="max-width: 1200px; margin: 0 auto;">
+    This site is always evolving! New scrapers and data sources added regularly.
+  </div>
+
+  <!-- Footer -->
+  <div class="y2k-footer">
+    <p>Made with love for Indian students dreaming of European opportunities</p>
+    <p>CareerScoutEuro &copy; 2026 | Best viewed in Netscape Navigator 4.0+</p>
+    <div class="webring">
+      [ &lt;&lt; Prev ] -- [ European Job Ring ] -- [ Next &gt;&gt; ]
+    </div>
+    <p style="margin-top: 10px; font-size: 10px;">
+      Y2K Compliant | Valid HTML 4.01 | Made on a Mac
+    </p>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
